@@ -1,0 +1,26 @@
+#!/usr/bin/make -f
+
+export LANG=C.UTF-8
+export LC_ALL=C.UTF-8
+export REBAR3=/usr/bin/rebar3
+export PREFIX=/usr
+
+%:
+	dh $@
+
+
+override_dh_auto_test:
+	CNT=3 ; rc=1 ; while [ $$CNT != 0 ] && [ $$rc != 0 ] ; do \
+		if dh_auto_test ; then \
+			rc=0 ; \
+		else \
+			rc=1 ; \
+			epmd -kill ; \
+		fi ; \
+		CNT=$$(( $$CNT - 1)) ; \
+	done ; \
+	if [ $${rc} != 0 ] ; then exit $$rc ; else epmd -kill ; fi
+
+override_dh_shlibdeps:
+	dh_shlibdeps
+	erlang-depends
