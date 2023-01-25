@@ -1,3 +1,9 @@
+elixir-lang (1.14.0.dfsg-2pexip2) pexip; urgency=medium
+
+  * Merge openssl3 changes to bullseye
+
+ -- Steve McIntyre <steve.mcintyre@pexip.com>  Wed, 25 Jan 2023 14:17:24 +0000
+
 elixir-lang (1.14.0.dfsg-2pexip1) pexip-bullseye-openssl3; urgency=medium
 
   * Prepare Pexip packaging
