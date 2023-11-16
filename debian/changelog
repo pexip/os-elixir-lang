@@ -1,3 +1,9 @@
+elixir-lang (1.14.0.dfsg-2pexip3) pexip-bookworm; urgency=medium
+
+  * Initial bookworm build
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Thu, 16 Nov 2023 09:58:30 +0000
+
 elixir-lang (1.14.0.dfsg-2pexip2) pexip; urgency=medium
 
   * Merge openssl3 changes to bullseye
